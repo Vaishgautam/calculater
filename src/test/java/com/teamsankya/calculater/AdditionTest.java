@@ -9,7 +9,7 @@ public class AdditionTest {
 	public void addIntTest() {
 		
 		int sum = Addition.add(45, 4);
-		Assert.assertEquals(48, sum);
+		Assert.assertEquals(49, sum);
 		
 	}
 
