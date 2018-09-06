@@ -1,0 +1,158 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (javaClasses.cpp:126), pid=12732, tid=10840
+#  fatal error: Invalid layout of preloaded class
+#
+# JRE version:  (8.0_31-b13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.31-b07 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000000c8e000):  JavaThread "Unknown thread" [_thread_in_vm, id=10840, stack(0x0000000002630000,0x0000000002730000)]
+
+Stack: [0x0000000002630000,0x0000000002730000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x3169ba]
+V  [jvm.dll+0x2674c3]
+V  [jvm.dll+0x268103]
+V  [jvm.dll+0x25f876]
+V  [jvm.dll+0x5e443]
+V  [jvm.dll+0x5ea5b]
+V  [jvm.dll+0x635de]
+V  [jvm.dll+0x637b9]
+V  [jvm.dll+0x1fa0a5]
+V  [jvm.dll+0x22b694]
+V  [jvm.dll+0x14d8c1]
+C  [javaw.exe+0x20c6]
+C  [javaw.exe+0xc9eb]
+C  [javaw.exe+0xca7f]
+C  [KERNEL32.DLL+0x13034]
+C  [ntdll.dll+0x71431]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000000c8e000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=10840, stack(0x0000000002630000,0x0000000002730000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5b00000, 0x00000000d8580000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5b00000,0x00000000d5ba6670,0x00000000d7b80000)
+  from space 5120K, 0% used [0x00000000d8080000,0x00000000d8080000,0x00000000d8580000)
+  to   space 5120K, 0% used [0x00000000d7b80000,0x00000000d7b80000,0x00000000d8080000)
+ ParOldGen       total 87552K, used 0K [0x0000000081000000, 0x0000000086580000, 0x00000000d5b00000)
+  object space 87552K, 0% used [0x0000000081000000,0x0000000081000000,0x0000000086580000)
+ Metaspace       used 665K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 67K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011bf0000,0x0000000011ff0000] byte_map_base: 0x00000000117e8000
+
+Marking Bits: (ParMarkBitMap*) 0x000000007123d4f0
+ Begin Bits: [0x00000000126a0000, 0x0000000014660000)
+ End Bits:   [0x0000000014660000, 0x0000000016620000)
+
+Polling page: 0x0000000000c30000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000002830000, 0x0000000002aa0000, 0x0000000011830000]
+ total_blobs=57 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.019 loading class java/lang/Short
+Event: 0.019 loading class java/lang/Short done
+Event: 0.019 loading class java/lang/Integer
+Event: 0.019 loading class java/lang/Integer done
+Event: 0.019 loading class java/lang/Long
+Event: 0.019 loading class java/lang/Long done
+Event: 0.020 loading class java/lang/NullPointerException
+Event: 0.020 loading class java/lang/NullPointerException done
+Event: 0.020 loading class java/lang/ArithmeticException
+Event: 0.020 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff7d5360000 - 0x00007ff7d5394000 	C:\Program Files\Java\jdk1.8.0_31\bin\javaw.exe
+0x00007fffb6be0000 - 0x00007fffb6dc1000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fffb6870000 - 0x00007fffb6922000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fffb33f0000 - 0x00007fffb3663000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fffb6660000 - 0x00007fffb6701000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fffb5d50000 - 0x00007fffb5dee000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fffb5cf0000 - 0x00007fffb5d4b000 	C:\WINDOWS\System32\sechost.dll
+0x00007fffb6930000 - 0x00007fffb6a54000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fffb6210000 - 0x00007fffb63a0000 	C:\WINDOWS\System32\USER32.dll
+0x00007fffb31b0000 - 0x00007fffb31d0000 	C:\WINDOWS\System32\win32u.dll
+0x00007fffb4150000 - 0x00007fffb4178000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fffb31d0000 - 0x00007fffb3362000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fffb3110000 - 0x00007fffb31af000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fffb2fb0000 - 0x00007fffb30aa000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fffa69c0000 - 0x00007fffa6c29000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.228_none_fb4599993062b194\COMCTL32.dll
+0x00007fffb5df0000 - 0x00007fffb6113000 	C:\WINDOWS\System32\combase.dll
+0x00007fffb3370000 - 0x00007fffb33ea000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fffb61d0000 - 0x00007fffb61fd000 	C:\WINDOWS\System32\IMM32.DLL
+0x00000000712c0000 - 0x0000000071392000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\msvcr100.dll
+0x0000000070a60000 - 0x00000000712ba000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\server\jvm.dll
+0x00007fffb6ba0000 - 0x00007fffb6ba8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fff9e3e0000 - 0x00007fff9e3e9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fffb6a60000 - 0x00007fffb6acc000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fffaf310000 - 0x00007fffaf333000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fffaf2e0000 - 0x00007fffaf30a000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007fffb3860000 - 0x00007fffb38a9000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x0000000070a50000 - 0x0000000070a5f000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\verify.dll
+0x0000000070a20000 - 0x0000000070a48000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\java.dll
+0x0000000070a00000 - 0x0000000070a16000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\zip.dll
+0x00007fffa3870000 - 0x00007fffa3a39000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dmaven.home=EMBEDDED -Dclassworlds.conf=C:\Tools\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf9021435534797391210.tmp -Dmaven.multiModuleProjectDirectory=C:\Tools\workspace\calculater -Dfile.encoding=Cp1252 -Xbootclasspath:C:\Program Files\Java\jre1.8.0_181\lib\resources.jar;C:\Program Files\Java\jre1.8.0_181\lib\rt.jar;C:\Program Files\Java\jre1.8.0_181\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_181\lib\jce.jar;C:\Program Files\Java\jre1.8.0_181\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_181\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_181\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jre1.8.0_181\lib\ext\cldrdata.jar;C:\Program Files\Java\jre1.8.0_181\lib\ext\dnsns.jar;C:\Program Files\Java\jre1.8.0_181\lib\ext\jaccess.jar;C:\Program Files\Java\jre1.8.0_181\lib\ext\jfxrt.jar;C:\Program Files\Java\jre1.8.0_181\lib\ext\localedata.jar;C:\Program Files\Java\jre1.8.0_181\lib\ext\nashorn.jar;C:\Program Files\Java\jre1.8.0_181\lib\ext\sunec.jar;C:\Program Files\Java\jre1.8.0_181\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jre1.8.0_181\lib\ext\sunmscapi.jar;C:\Program Files\Java\jre1.8.0_181\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jre1.8.0_181\lib\ext\zipfs.jar 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher -B clean install
+java_class_path (initial): /C:/Tools/eclipse-jee-oxygen-M7-win32-x86_64/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.8.0.20170516-2042/jars/plexus-classworlds-2.5.2.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_31
+PATH=C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Program Files (x86)\HP SimplePass\x64;C:\Program Files (x86)\HP SimplePass\;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Tools\apache-maven-3.5.4-bin\apache-maven-3.5.4/bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Users\gauta\AppData\Local\Microsoft\WindowsApps;;C:\Tools\eclipse-jee-oxygen-M7-win32-x86_64\eclipse;
+USERNAME=gauta
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 8319000k(3979368k free), swap 9629720k(3325688k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.31-b07) for windows-amd64 JRE (1.8.0_31-b13), built on Dec 17 2014 21:00:28 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue Aug 28 11:12:16 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
